@@ -2,34 +2,33 @@
 
 Doel: een **super snelle Vite build** (SEO/Lighthouse, caching) die later eenvoudig als **WordPress theme + WooCommerce** kan worden ingezet.
 
+Basis opzet compleet. Wil meteen clean houden en performance en mobile first te werk gaan.
+Code kwaliteit is belangrijkste wat er is, houd je aan coding best practices and coding standards.
+Gemaakt om later eventueel naar WordPress te verplaatsen met Woocommerce als dat nodig is.
+
+
 Project-structuur (hybride):
 - `site/` → Vite + Tailwind + Alpine (snelle frontend / static build)
 - `wp-theme/` → WordPress theme skeleton (later: Vite `dist/` enqueuen via manifest)
 - `docs/` → documentatie, checklists
+- `AGENTS.md` → contributor guide (commands, style, PR expectations)
 
 ---
 
-## 1) Node + deps installeren (latest)
+## 1) Node + deps installeren
 
 Werk altijd in de `site/` map.
 
 ### Lokaal (WSL)
 ```bash
 cd site
-npm init -y
-npm install alpinejs
-npm install -D vite tailwindcss postcss autoprefixer
+npm install
 ```
 
 ### Via DDEV (generic project)
 ```bash
 # install (als node_modules nog niet bestaat)
 ddev exec bash -lc 'cd site && npm install'
-
-# of: direct de deps installeren (latest)
-ddev exec bash -lc 'cd site && npm init -y'
-ddev exec bash -lc 'cd site && npm install alpinejs'
-ddev exec bash -lc 'cd site && npm install -D vite tailwindcss postcss autoprefixer'
 ```
 
 Check versions:
@@ -40,7 +39,7 @@ ddev exec npm -v
 
 ---
 
-## 2) Vite build workflow (documentatie focus)
+## 2) Vite build workflow
 
 Vite commands:
 ```bash
@@ -64,23 +63,19 @@ npm run preview  # serve dist/ lokaal (test)
 
 ---
 
-## 3) Test: build draaien met index pagina
+## 3) E2E tests (Playwright)
 
-Assumptie: je hebt minimaal `site/index.html` en Vite scripts/config staan.
+We gebruiken Playwright voor snelle regressiechecks (SEO tags, basis structuur) tegen de **production build** (`vite preview`).
 
-Run:
+Eenmalig (download browsers):
 ```bash
 cd site
-npm run build
+npx playwright install --with-deps
 ```
 
-Verwacht:
-- output in `site/dist/`
-- logs met bundling info
-
-Test lokaal:
+Run E2E:
 ```bash
-npm run preview
+npm run test:e2e
 ```
 
 ---
