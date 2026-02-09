@@ -2,7 +2,7 @@
 // Keep this lightweight and SEO/perf-oriented; avoid adding heavy test fixtures.
 
 /** @type {import('@playwright/test').PlaywrightTestConfig} */
-module.exports = {
+const config = {
   testDir: "tests",
   timeout: 30_000,
   retries: process.env.CI ? 2 : 0,
@@ -18,3 +18,4 @@ module.exports = {
   }
 };
 
+export default config;
