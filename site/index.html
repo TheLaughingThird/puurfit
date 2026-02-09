@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Puurfit | Yoga, Pilates & Reformer Studio</title>
+  <meta name="description" content="Puurfit is een yoga-, pilates- en reformer studio voor solo- en groepslessen met ervaren instructeur. Rust, kracht en mobiliteit in één." />
+  <link rel="canonical" href="https://puurfit.nl/" />
+  <meta property="og:title" content="Puurfit | Yoga, Pilates & Reformer Studio" />
+  <meta property="og:description" content="Solo of groepslessen: yoga, pilates, reformer — met ervaren instructeur." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://puurfit.nl/" />
+  <meta property="og:image" content="/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Vite entry -->
+  <script type="module" src="/src/js/main.js"></script>
+  <!-- LocalBusiness schema (vul later adres/telefoon/stad in) -->
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"SportsActivityLocation",
+      "name":"Puurfit",
+      "url":"https://puurfit.nl/",
+      "description":"Yoga, Pilates en Reformer studio voor solo of groepslessen met ervaren instructeur.",
+      "sport":["Yoga","Pilates","Reformer Pilates","Fitness","Personal training","Groepsles"],
+      "image":"https://puurfit.nl/og.jpg"
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-white text-slate-900">
+<!-- Top bar -->
+<header x-data="nav" class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="container flex items-center justify-between py-3">
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200">P</span>
+      <span>Puurfit</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex">
+      <a href="#aanbod" class="navlink">Aanbod</a>
+      <a href="#rooster" class="navlink">Rooster</a>
+      <a href="#prijzen" class="navlink">Prijzen</a>
+      <a href="#contact" class="navlink">Contact</a>
+      <a href="#proefles" class="btn-primary rounded-xl px-4 py-2">Boek proefles</a>
+    </nav>
+
+    <button class="surface rounded-xl px-3 py-2 md:hidden" @click="toggle()" aria-label="Menu" :aria-expanded="open.toString()">
+      <span class="text-sm font-medium">Menu</span>
+    </button>
+  </div>
+</header>
+
+
+<header x-data="nav" class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+      <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200">P</span>
+      <span>Puurfit</span>
+    </a>
+
+    <nav class="hidden items-center gap-6 md:flex">
+      <a href="#aanbod" class="text-sm hover:underline">Aanbod</a>
+      <a href="#rooster" class="text-sm hover:underline">Rooster</a>
+      <a href="#prijzen" class="text-sm hover:underline">Prijzen</a>
+      <a href="#contact" class="text-sm hover:underline">Contact</a>
+      <a href="#proefles" class="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white hover:bg-slate-800">Boek proefles</a>
+    </nav>
+
+    <button
+      class="inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2 md:hidden"
+      @click="toggle()"
+      aria-label="Menu"
+      :aria-expanded="open.toString()"
+    >
+      <span class="text-sm font-medium">Menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden" x-show="open" x-transition>
+    <div class="mx-auto max-w-6xl px-4 pb-4">
+      <div class="rounded-2xl border border-slate-200 bg-white p-3">
+        <a href="#aanbod" @click="open=false" class="block rounded-xl px-3 py-2 hover:bg-slate-50">Aanbod</a>
+        <a href="#rooster" @click="open=false" class="block rounded-xl px-3 py-2 hover:bg-slate-50">Rooster</a>
+        <a href="#prijzen" @click="open=false" class="block rounded-xl px-3 py-2 hover:bg-slate-50">Prijzen</a>
+        <a href="#contact" @click="open=false" class="block rounded-xl px-3 py-2 hover:bg-slate-50">Contact</a>
+        <a href="#proefles" @click="open=false" class="mt-2 block rounded-xl bg-slate-900 px-3 py-2 text-center font-medium text-white hover:bg-slate-800">Boek proefles</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="border-b border-slate-200">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-2 md:py-16">
+      <div class="flex flex-col justify-center">
+        <p class="mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs">
+          Studio • Solo & groepslessen • Ervaren instructeur
+        </p>
+        <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">
+          Yoga, Pilates & Reformer — kracht en rust in één studio
+        </h1>
+        <p class="mt-4 text-base leading-relaxed text-slate-700">
+          Puurfit helpt je aan een sterk, soepel en energiek lichaam met yoga, pilates, reformer en fitness.
+          Kies voor groepsles of 1-op-1 training.
+        </p>
+
+        <div id="proefles" class="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a href="#contact" class="rounded-2xl bg-slate-900 px-5 py-3 text-center text-sm font-medium text-white hover:bg-slate-800">
+            Proefles boeken
+          </a>
+          <a href="#aanbod" class="rounded-2xl border border-slate-200 px-5 py-3 text-center text-sm font-medium hover:bg-slate-50">
+            Bekijk aanbod
+          </a>
+        </div>
+
+        <dl class="mt-8 grid grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <dt class="text-xs text-slate-600">Focus</dt>
+            <dd class="mt-1 text-sm font-semibold">Mobiliteit</dd>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <dt class="text-xs text-slate-600">Training</dt>
+            <dd class="mt-1 text-sm font-semibold">Kracht</dd>
+          </div>
+          <div class="rounded-2xl border border-slate-200 p-4">
+            <dt class="text-xs text-slate-600">Resultaat</dt>
+            <dd class="mt-1 text-sm font-semibold">Balans</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Visual placeholder (later vervangen door echte foto) -->
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-3xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100"></div>
+        <div class="absolute -bottom-6 -left-6 hidden w-64 rounded-3xl border border-slate-200 bg-white p-4 shadow-sm md:block">
+          <p class="text-sm font-semibold">Populair</p>
+          <p class="mt-1 text-sm text-slate-600">Reformer groepsles (max 8)</p>
+          <p class="mt-3 inline-flex rounded-full bg-slate-900 px-3 py-1 text-xs font-medium text-white">Start deze week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aanbod -->
+  <section id="aanbod" class="mx-auto max-w-6xl px-4 py-12">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight">Aanbod</h2>
+        <p class="mt-2 max-w-2xl text-slate-700">
+          Voor beginners tot gevorderden: bouw aan kracht, houding en flexibiliteit met lessen die bij jou passen.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Yoga</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Adem, mobiliteit en focus. Ideaal voor herstel, stressreductie en soepel bewegen.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Pilates</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Core, houding en controle. Sterk fundament voor sport én dagelijks leven.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Reformer</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Slimme weerstand, full-body training. Kracht + stabiliteit met precisie.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Groepslessen</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Motiverend, energiek en gestructureerd. Kies het niveau dat past.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">1-op-1 training</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Personal training met plan: techniek, doelen en progressie op maat.
+        </p>
+      </article>
+
+      <article class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Fitness & kracht</h3>
+        <p class="mt-2 text-sm leading-relaxed text-slate-700">
+          Functionele kracht, stabiliteit en conditie — met aandacht voor vorm.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Rooster teaser -->
+  <section id="rooster" class="border-y border-slate-200 bg-slate-50">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="grid gap-8 md:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-semibold tracking-tight">Rooster</h2>
+          <p class="mt-2 text-slate-700">
+            Hou het simpel: een overzichtelijke planning die snel laadt. Later kunnen we dit koppelen aan je boekingsysteem.
+          </p>
+          <a href="#" class="mt-5 inline-flex rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">
+            Bekijk volledige planning
+          </a>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-6">
+          <ul class="space-y-3 text-sm">
+            <li class="flex items-center justify-between">
+              <span class="font-medium">Ma</span><span class="text-slate-600">18:00 Pilates • 19:15 Yoga</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-medium">Wo</span><span class="text-slate-600">18:30 Reformer • 19:30 Core</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-medium">Za</span><span class="text-slate-600">09:30 Yoga • 10:45 Reformer</span>
+            </li>
+          </ul>
+          <p class="mt-4 text-xs text-slate-500">* voorbeeld tijden (later dynamisch)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prijzen teaser -->
+  <section id="prijzen" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-2xl font-semibold tracking-tight">Prijzen</h2>
+    <p class="mt-2 max-w-2xl text-slate-700">Transparant en simpel. Kies per les, strippenkaart of membership.</p>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Proefles</h3>
+        <p class="mt-2 text-sm text-slate-700">Perfect om te starten.</p>
+        <p class="mt-4 text-3xl font-semibold">€—</p>
+        <a href="#contact" class="mt-5 inline-flex w-full justify-center rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">Boek</a>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Strippenkaart</h3>
+        <p class="mt-2 text-sm text-slate-700">Flexibel trainen.</p>
+        <p class="mt-4 text-3xl font-semibold">€—</p>
+        <a href="#contact" class="mt-5 inline-flex w-full justify-center rounded-2xl border border-slate-200 px-5 py-3 text-sm font-medium hover:bg-slate-50">Info</a>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 p-6">
+        <h3 class="text-lg font-semibold">Membership</h3>
+        <p class="mt-2 text-sm text-slate-700">Voor vaste routine.</p>
+        <p class="mt-4 text-3xl font-semibold">€—</p>
+        <a href="#contact" class="mt-5 inline-flex w-full justify-center rounded-2xl border border-slate-200 px-5 py-3 text-sm font-medium hover:bg-slate-50">Kies</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (Alpine) -->
+  <section class="border-y border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-12" x-data="faq">
+      <h2 class="text-2xl font-semibold tracking-tight">Veelgestelde vragen</h2>
+
+      <div class="mt-8 space-y-3">
+        <div class="rounded-2xl border border-slate-200">
+          <button class="flex w-full items-center justify-between px-5 py-4 text-left"
+                  @click="toggle('q1')" :aria-expanded="(openId==='q1').toString()">
+            <span class="font-medium">Kan ik als beginner starten?</span>
+            <span class="text-slate-500">+</span>
+          </button>
+          <div class="px-5 pb-4 text-sm text-slate-700" x-show="openId==='q1'" x-transition>
+            Ja. We geven opties per niveau en letten op techniek en veiligheid.
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200">
+          <button class="flex w-full items-center justify-between px-5 py-4 text-left"
+                  @click="toggle('q2')" :aria-expanded="(openId==='q2').toString()">
+            <span class="font-medium">Wat is Reformer Pilates?</span>
+            <span class="text-slate-500">+</span>
+          </button>
+          <div class="px-5 pb-4 text-sm text-slate-700" x-show="openId==='q2'" x-transition>
+            Pilates op een toestel met verstelbare weerstand. Heel effectief voor kracht, houding en stabiliteit.
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-slate-200">
+          <button class="flex w-full items-center justify-between px-5 py-4 text-left"
+                  @click="toggle('q3')" :aria-expanded="(openId==='q3').toString()">
+            <span class="font-medium">Doen jullie ook 1-op-1?</span>
+            <span class="text-slate-500">+</span>
+          </button>
+          <div class="px-5 pb-4 text-sm text-slate-700" x-show="openId==='q3'" x-transition>
+            Ja, personal training en privé sessies zijn mogelijk. We maken een plan op maat.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-6xl px-4 py-12">
+    <div class="grid gap-8 md:grid-cols-2">
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight">Contact</h2>
+        <p class="mt-2 text-slate-700">Stuur een bericht voor een proefles, intake of vragen.</p>
+
+        <div class="mt-6 space-y-2 text-sm text-slate-700">
+          <p><span class="font-medium">Email:</span> info@puurfit.nl</p>
+          <p><span class="font-medium">Locatie:</span> (vul stad/adres later in)</p>
+        </div>
+      </div>
+
+      <form class="rounded-3xl border border-slate-200 bg-white p-6">
+        <label class="block text-sm font-medium">Naam</label>
+        <input class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300" />
+
+        <label class="mt-4 block text-sm font-medium">Email</label>
+        <input type="email" class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300" />
+
+        <label class="mt-4 block text-sm font-medium">Bericht</label>
+        <textarea rows="4" class="mt-1 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-slate-300"></textarea>
+
+        <button type="button" class="mt-4 w-full rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800">
+          Verstuur
+        </button>
+
+        <p class="mt-3 text-xs text-slate-500">* Formulier is nu nog dummy (later verbinden we dit met mail/CRM).</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 bg-white">
+  <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+    <p>© <span id="y"></span> Puurfit</p>
+    <p class="flex gap-4">
+      <a class="hover:underline" href="#">Privacy</a>
+      <a class="hover:underline" href="#">Algemene voorwaarden</a>
+    </p>
+  </div>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</footer>
+</body>
+</html>
