@@ -1,0 +1,10 @@
+<footer class="border-t border-slate-200 bg-white">
+  <div class="container flex flex-col gap-2 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+    <p>© <span id="y"></span> Puurfit</p>
+    <p class="flex gap-4">
+      <a class="hover:underline" href="/privacy.html">Privacy</a>
+      <a class="hover:underline" href="/voorwaarden.html">Voorwaarden</a>
+    </p>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</footer>

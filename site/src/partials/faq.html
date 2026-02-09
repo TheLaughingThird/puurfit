@@ -1,0 +1,27 @@
+<section class="section-border">
+  <div class="container section" x-data="faq">
+    <h2 class="h2">Veelgestelde vragen</h2>
+    <div class="mt-8 space-y-3">
+      <div class="faq-item">
+        <button class="faq-btn" @click="toggle('q1')" :aria-expanded="(openId==='q1').toString()">
+          <span class="font-medium">Kan ik als beginner starten?</span><span class="text-slate-500">+</span>
+        </button>
+        <div class="faq-body" x-show="openId==='q1'" x-transition>Ja. Je krijgt opties per niveau en we letten op techniek.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" @click="toggle('q2')" :aria-expanded="(openId==='q2').toString()">
+          <span class="font-medium">Wat is Reformer Pilates?</span><span class="text-slate-500">+</span>
+        </button>
+        <div class="faq-body" x-show="openId==='q2'" x-transition>Pilates op een toestel met verstelbare weerstand; super voor kracht en controle.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" @click="toggle('q3')" :aria-expanded="(openId==='q3').toString()">
+          <span class="font-medium">Doen jullie ook 1-op-1 training?</span><span class="text-slate-500">+</span>
+        </button>
+        <div class="faq-body" x-show="openId==='q3'" x-transition>Ja. Privé sessies en personal training op doel en niveau.</div>
+      </div>
+    </div>
+  </div>
+</section>

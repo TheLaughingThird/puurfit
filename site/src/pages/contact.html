@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Puurfit</title>
+  <meta name="description" content="Contact opnemen met Puurfit voor proefles, intake of vragen." />
+  <link rel="canonical" href="https://puurfit.nl/contact.html" />
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="min-h-screen bg-white text-slate-900">
+<header x-data="nav" class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
+  <div class="container flex items-center justify-between py-3">
+    <a href="/index.html" class="flex items-center gap-2 font-semibold tracking-tight"><span class="logo-badge">P</span><span>Puurfit</span></a>
+    <nav class="hidden items-center gap-6 md:flex">
+      <a class="navlink" href="/lessen.html">Lessen</a><a class="navlink" href="/rooster.html">Rooster</a><a class="navlink" href="/prijzen.html">Prijzen</a><a class="navlink" href="/over.html">Over</a><a class="navlink" href="/contact.html">Contact</a>
+    </nav>
+    <button class="surface rounded-xl px-3 py-2 md:hidden" @click="toggle()" aria-label="Menu" :aria-expanded="open.toString()"><span class="text-sm font-medium">Menu</span></button>
+  </div>
+  <div class="md:hidden" x-show="open" x-transition><div class="container pb-4"><div class="surface rounded-2xl p-3">
+    <a class="navitem" href="/lessen.html" @click="open=false">Lessen</a><a class="navitem" href="/rooster.html" @click="open=false">Rooster</a><a class="navitem" href="/prijzen.html" @click="open=false">Prijzen</a><a class="navitem" href="/over.html" @click="open=false">Over</a><a class="navitem" href="/contact.html" @click="open=false">Contact</a>
+  </div></div></div>
+</header>
+
+<main>
+  <section class="container section">
+    <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">Contact</h1>
+    <p class="p-muted mt-4 max-w-2xl">Proefles, intake of vraag? Stuur een bericht.</p>
+
+    <div class="mt-8 grid gap-8 md:grid-cols-2">
+      <div class="card">
+        <h2 class="h3">Gegevens</h2>
+        <div class="mt-4 space-y-2 text-sm text-slate-700">
+          <p><span class="font-medium">Email:</span> info@puurfit.nl</p>
+          <p><span class="font-medium">Locatie:</span> (vul stad/adres later in)</p>
+        </div>
+      </div>
+
+      <form class="card">
+        <label class="block text-sm font-medium">Naam</label>
+        <input class="input" autocomplete="name" />
+
+        <label class="mt-4 block text-sm font-medium">Email</label>
+        <input class="input" type="email" autocomplete="email" />
+
+        <label class="mt-4 block text-sm font-medium">Bericht</label>
+        <textarea class="input" rows="4"></textarea>
+
+        <button class="btn-primary mt-4 w-full" type="button">Verstuur</button>
+        <p class="mt-3 text-xs text-slate-500">* Dummy form (later endpoint/HTMX).</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 bg-white">
+  <div class="container flex flex-col gap-2 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+    <p>© <span id="y"></span> Puurfit</p>
+    <p class="flex gap-4"><a class="hover:underline" href="/privacy.html">Privacy</a><a class="hover:underline" href="/voorwaarden.html">Voorwaarden</a></p>
+  </div>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</footer>
+</body>
+</html>
