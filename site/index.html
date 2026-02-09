@@ -13,30 +13,71 @@
   <meta content="Solo of groepslessen: yoga, pilates, reformer — met ervaren instructeur." property="og:description"/>
   <meta content="website" property="og:type"/>
   <meta content="https://puurfit.nl/" property="og:url"/>
-  <meta content="/og.jpg" property="og:image"/>
+  <meta content="https://puurfit.nl/og.jpg" property="og:image"/>
+  <meta content="Puurfit" property="og:site_name"/>
+  <meta content="nl_NL" property="og:locale"/>
+
   <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Puurfit | Yoga, Pilates & Reformer Studio" name="twitter:title"/>
+  <meta content="Solo of groepslessen: yoga, pilates, reformer — met ervaren instructeur." name="twitter:description"/>
+  <meta content="https://puurfit.nl/og.jpg" name="twitter:image"/>
 
   <link href="/favicon.ico" rel="icon"/>
   <link href="/site.webmanifest" rel="manifest"/>
+
+  <link rel="stylesheet" href="/src/css/tailwind.css" />
 
   <script src="/src/js/main.js" type="module"></script>
 
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SportsActivityLocation",
-      "name": "Puurfit",
-      "url": "https://puurfit.nl/",
-      "description": "Yoga, Pilates en Reformer studio voor solo of groepslessen met ervaren instructeur.",
-      "sport": [
-        "Yoga",
-        "Pilates",
-        "Reformer Pilates",
-        "Fitness",
-        "Personal training",
-        "Groepsles"
-      ],
-      "image": "https://puurfit.nl/og.jpg"
+      "@graph": [
+        {
+          "@type": "SportsActivityLocation",
+          "name": "Puurfit",
+          "url": "https://puurfit.nl/",
+          "description": "Yoga, Pilates en Reformer studio voor solo of groepslessen met ervaren instructeur.",
+          "sport": [
+            "Yoga",
+            "Pilates",
+            "Reformer Pilates",
+            "Fitness",
+            "Personal training",
+            "Groepsles"
+          ],
+          "image": "https://puurfit.nl/og.jpg"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Kan ik als beginner starten?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. We geven opties per niveau en letten op techniek en veiligheid."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Wat is Reformer Pilates?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pilates op een toestel met verstelbare weerstand. Heel effectief voor kracht, houding en stabiliteit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Doen jullie ook 1-op-1?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, personal training en privé sessies zijn mogelijk. We maken een plan op maat."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
@@ -170,7 +211,7 @@
           <h2 class="h2">Rooster</h2>
           <p class="p-muted mt-2">Hou het simpel: een overzichtelijke planning die snel laadt. Later koppelen we dit aan
             je boekingssysteem.</p>
-          <a class="btn-primary mt-5" href="/src/pages/rooster.html">Bekijk volledige planning</a>
+          <a class="btn-primary mt-5" href="/rooster.html">Bekijk volledige planning</a>
         </div>
 
         <div class="card">
@@ -289,10 +330,23 @@
 <footer class="border-t border-slate-200 bg-white">
   <div class="container flex flex-col gap-2 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
     <p>© <span id="y"></span> Puurfit</p>
-    <p class="flex gap-4">
-      <a class="hover:underline" href="#">Privacy</a>
-      <a class="hover:underline" href="#">Algemene voorwaarden</a>
+    <p class="flex flex-wrap gap-4">
+      <a class="hover:underline" href="/privacy.html">Privacy</a>
+      <a class="hover:underline" href="/voorwaarden.html">Algemene voorwaarden</a>
+      <button class="hover:underline" type="button" data-share-button aria-controls="share-menu" aria-expanded="false">Delen</button>
     </p>
+  </div>
+  <div class="container pb-8">
+    <div class="surface hidden max-w-md rounded-2xl p-3 text-sm" id="share-menu" data-share-menu>
+      <p class="text-xs text-slate-500">Delen via</p>
+      <div class="mt-2 flex flex-wrap gap-3">
+        <a class="hover:underline" data-share-link="whatsapp" href="#">WhatsApp</a>
+        <a class="hover:underline" data-share-link="facebook" href="#">Facebook</a>
+        <a class="hover:underline" data-share-link="linkedin" href="#">LinkedIn</a>
+        <a class="hover:underline" data-share-link="x" href="#">X</a>
+        <a class="hover:underline" data-share-link="email" href="#">Email</a>
+      </div>
+    </div>
   </div>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </footer>

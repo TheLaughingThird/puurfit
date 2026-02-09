@@ -6,13 +6,30 @@
   <title>Lessen | Puurfit</title>
   <meta name="description" content="Yoga, Pilates, Reformer, fitness en 1-op-1 training bij Puurfit. Voor beginners en gevorderden." />
   <link rel="canonical" href="https://puurfit.nl/lessen.html" />
+
+  <meta property="og:title" content="Lessen | Puurfit" />
+  <meta property="og:description" content="Yoga, Pilates, Reformer, fitness en 1-op-1 training bij Puurfit. Voor beginners en gevorderden." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://puurfit.nl/lessen.html" />
+  <meta property="og:image" content="https://puurfit.nl/og.jpg" />
+  <meta property="og:site_name" content="Puurfit" />
+  <meta property="og:locale" content="nl_NL" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lessen | Puurfit" />
+  <meta name="twitter:description" content="Yoga, Pilates, Reformer, fitness en 1-op-1 training bij Puurfit. Voor beginners en gevorderden." />
+  <meta name="twitter:image" content="https://puurfit.nl/og.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="/src/css/tailwind.css" />
   <script type="module" src="/src/js/main.js"></script>
 </head>
 <body class="min-h-screen bg-white text-slate-900">
 <!-- header -->
 <header x-data="nav" class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur">
   <div class="container flex items-center justify-between py-3">
-    <a href="/index.html" class="flex items-center gap-2 font-semibold tracking-tight"><span class="logo-badge">P</span><span>Puurfit</span></a>
+    <a href="/" class="flex items-center gap-2 font-semibold tracking-tight"><span class="logo-badge">P</span><span>Puurfit</span></a>
     <nav class="hidden items-center gap-6 md:flex">
       <a class="navlink" href="/lessen.html">Lessen</a>
       <a class="navlink" href="/rooster.html">Rooster</a>
@@ -58,7 +75,23 @@
 <footer class="border-t border-slate-200 bg-white">
   <div class="container flex flex-col gap-2 py-8 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
     <p>© <span id="y"></span> Puurfit</p>
-    <p class="flex gap-4"><a class="hover:underline" href="/privacy.html">Privacy</a><a class="hover:underline" href="/voorwaarden.html">Voorwaarden</a></p>
+    <p class="flex flex-wrap gap-4">
+      <a class="hover:underline" href="/privacy.html">Privacy</a>
+      <a class="hover:underline" href="/voorwaarden.html">Algemene voorwaarden</a>
+      <button class="hover:underline" type="button" data-share-button aria-controls="share-menu" aria-expanded="false">Delen</button>
+    </p>
+  </div>
+  <div class="container pb-8">
+    <div class="surface hidden max-w-md rounded-2xl p-3 text-sm" id="share-menu" data-share-menu>
+      <p class="text-xs text-slate-500">Delen via</p>
+      <div class="mt-2 flex flex-wrap gap-3">
+        <a class="hover:underline" data-share-link="whatsapp" href="#">WhatsApp</a>
+        <a class="hover:underline" data-share-link="facebook" href="#">Facebook</a>
+        <a class="hover:underline" data-share-link="linkedin" href="#">LinkedIn</a>
+        <a class="hover:underline" data-share-link="x" href="#">X</a>
+        <a class="hover:underline" data-share-link="email" href="#">Email</a>
+      </div>
+    </div>
   </div>
   <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </footer>

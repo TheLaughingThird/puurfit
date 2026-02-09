@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://puurfit.nl/</loc></url>
-  <url><loc>https://puurfit.nl/lessen</loc></url>
-  <url><loc>https://puurfit.nl/rooster</loc></url>
-  <url><loc>https://puurfit.nl/prijzen</loc></url>
-  <url><loc>https://puurfit.nl/over</loc></url>
-  <url><loc>https://puurfit.nl/contact</loc></url>
+  <url><loc>https://puurfit.nl/lessen.html</loc></url>
+  <url><loc>https://puurfit.nl/rooster.html</loc></url>
+  <url><loc>https://puurfit.nl/prijzen.html</loc></url>
+  <url><loc>https://puurfit.nl/over.html</loc></url>
+  <url><loc>https://puurfit.nl/contact.html</loc></url>
+  <url><loc>https://puurfit.nl/blog.html</loc></url>
 </urlset>
